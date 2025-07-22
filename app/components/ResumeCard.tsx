@@ -20,7 +20,6 @@ const ResumeCard = ({
     };
     loadResume();
   }, [imagePath]);
-
   return (
     <Link
       className="resume-card animate-in fade-in duration-1000"

@@ -1,6 +1,5 @@
 import Navbar from "~/components/Navbar";
 import type { Route } from "./+types/home";
-import { resumes } from "~/constants";
 import ResumeCard from "~/components/ResumeCard";
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
@@ -16,7 +15,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const { auth, kv } = usePuterStore();
   const navigate = useNavigate();
-  const [resume, setResumes] = useState<Resume[]>([]);
+  const [resumes, setResumes] = useState<Resume[]>([]);
   const [loadingResumes, setLoadingResumes] = useState(false);
 
   useEffect(() => {
